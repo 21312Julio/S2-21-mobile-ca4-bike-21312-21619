@@ -1,0 +1,47 @@
+<resources>
+    <!-- Splash Screen Strings -->
+    <string name="app_name">weather_application</string>
+    <string name="splash_1">Planned on biking but now it is raining?</string>
+    <string name="splash_2">With Wheelio you can check available bikes right now</string>
+    <string name="splash_21">and the weather!</string>
+    <string name="splash_loginbt">Already have an account</string>
+    <string name="splash_registerbt">Sign up for free</string>
+    <string name="logo_description">Bike Logo</string>
+
+    <!-- Login Screen Strings -->
+    <string name="back_button">back</string>
+    <string name="login_email">email...</string>
+    <string name="login_password">password...</string>
+    <string name="login_loginbt">Login</string>
+
+    <!-- Register Screen Strings -->
+    <string name="register_firstname">first name...</string>
+    <string name="register_secondname">last name...</string>
+    <string name="register_email">email...</string>
+    <string name="register_password">password...</string>
+    <string name="register_rgbutton">Register</string>
+
+    <!-- Feed Screen Strings -->
+    <string name="feed_logoff">Log Off Button</string>
+    <string name="feed_editprofile">Profile</string>
+    <string name="feed_biking">Man on Bike</string>
+    <string name="feed_findbike_bt">Find a Bike Near You</string>
+    <string name="feed_favorites_bt">Favorites</string>
+    <string name="feed_temperaturevalue">12°C</string>
+    <string name="feed_address">Brazil, SP</string>
+    <string name="feed_error">Something went wrong. Try again</string>
+    <string name="feed_weatherDescription">Cloudy</string>
+    <string name="feed_minTemp">Min Temp: 29°C</string>
+    <string name="feed_maxTemp">Max Temp: 80°C</string>
+    <string name="feed_imageDescription">maxminTemp</string>
+    <string name="feed_dublin">Dublin, IE</string>
+    <string name="feed_paris">Paris, FR</string>
+
+    <!-- Profile Screen Strings -->
+    <string name="profile_edit">Save Profile</string>
+    <string name="profile_reset_password">Reset Password</string>
+    <string name="profile_firstName">First Name</string>
+    <string name="profile_secondName">Second Name</string>
+
+
+</resources>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContainerFeed"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".Feed">
+
+    <ImageButton
+        android:id="@+id/imageButton_logOff"
+        android:layout_width="32dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/feed_logoff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logofficon" />
+
+    <Button
+        android:id="@+id/buttonEditProfile"
+        android:layout_width="99dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_edittext"
+        android:fontFamily="@font/titillium_web_bold"
+        android:text="@string/feed_editprofile"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="186dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="28dp"
+        android:contentDescription="@string/feed_biking"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bikingvectorfeed" />
+
+    <Button
+        android:id="@+id/button_favorites"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="337dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/round_edittext"
+        android:fontFamily="@font/titillium_web_bold"
+        android:text="@string/feed_favorites_bt"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="#FFFFFF"
+        app:icon="@drawable/favorites"
+        app:iconGravity="textStart"
+        app:iconPadding="5dp"
+        app:iconTint="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_findBikeNearYou"
+        android:layout_width="337dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round_edittext"
+        android:fontFamily="@font/titillium_web_bold"
+        android:text="@string/feed_findbike_bt"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/button_favorites"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_temperature"
+        android:layout_width="411dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="232dp"
+        android:fontFamily="@font/titillium_web_light"
+        android:gravity="center_horizontal"
+        android:text="@string/feed_temperaturevalue"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_feed"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/titillium_web_bold"
+        android:text="@string/feed_error"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/titillium_web_light"
+        android:text="@string/feed_address"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_description"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/titillium_web_light"
+        android:gravity="center_horizontal"
+        android:text="@string/feed_weatherDescription"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_temperature" />
+
+    <TextView
+        android:id="@+id/textView_minTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/titillium_web_light"
+        android:text="@string/feed_minTemp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_description" />
+
+    <TextView
+        android:id="@+id/textView_maxTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:fontFamily="@font/titillium_web_light"
+        android:text="@string/feed_maxTemp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView_description" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/feed_imageDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_description"
+        app:srcCompat="@drawable/separator" />
+
+    <ImageView
+        android:id="@+id/imageView_weatherIcon"
+        android:layout_width="146dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="108dp"
+        android:contentDescription="@string/feed_imageDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/scatteredclouds" />
+
+    <Button
+        android:id="@+id/button_toDublin"
+        android:layout_width="111dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_edittext"
+        android:fontFamily="@font/titillium_web_bold"
+        android:text="@string/feed_dublin"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
