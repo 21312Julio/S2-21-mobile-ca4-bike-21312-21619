@@ -15,9 +15,6 @@ import kotlinx.android.synthetic.main.register_screen.*
 class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        //Hiding Status Bar
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_screen)
 

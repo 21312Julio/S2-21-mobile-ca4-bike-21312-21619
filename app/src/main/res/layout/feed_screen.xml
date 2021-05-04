@@ -8,40 +8,36 @@
     android:background="@drawable/app_background"
     tools:context=".Feed">
 
-    <ImageButton
-        android:id="@+id/imageButton_logOff"
-        android:layout_width="32dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/feed_logoff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logofficon" />
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/titillium_web_bold"
+        android:text="@string/feed_profile"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonEditProfile"
+        app:layout_constraintStart_toStartOf="@+id/buttonEditProfile"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEditProfile" />
 
     <Button
-        android:id="@+id/buttonEditProfile"
-        android:layout_width="99dp"
-        android:layout_height="48dp"
+        android:id="@+id/imageButton_logOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@drawable/round_edittext"
         android:fontFamily="@font/titillium_web_bold"
-        android:text="@string/feed_editprofile"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:backgroundTint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/feed_logoff"
+        android:textSize="16sp"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="186dp"
-        android:layout_height="140dp"
+        android:layout_width="135dp"
+        android:layout_height="97dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginEnd="32dp"
@@ -59,7 +55,7 @@
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="337dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/round_edittext"
         android:fontFamily="@font/titillium_web_bold"
         android:text="@string/feed_favorites_bt"
@@ -93,7 +89,7 @@
 
     <TextView
         android:id="@+id/textView_temperature"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="88dp"
         android:layout_marginTop="232dp"
         android:fontFamily="@font/titillium_web_light"
@@ -231,5 +227,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_address" />
+
+    <ImageButton
+        android:id="@+id/buttonEditProfile"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/feed_imageDescription"
+        android:tint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profileicon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

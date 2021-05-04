@@ -5,6 +5,7 @@ import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.feed_screen.*
 import kotlinx.android.synthetic.main.feed_screen.imageButton_logOff
@@ -29,10 +30,16 @@ class FeedParis : AppCompatActivity() {
     val API: String = "8ad632697414be0ea06cd0357fb775ba"
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.feed_screen_paris)
 
         WeatherTask().execute()
+
+        button_findBikeNearYou2.setOnClickListener {
+            val intentMaps = Intent(this, MapsForBike::class.java)
+            startActivity(intentMaps)
+        }
 
         imageButton_logOff.setOnClickListener {
             userSignOut()

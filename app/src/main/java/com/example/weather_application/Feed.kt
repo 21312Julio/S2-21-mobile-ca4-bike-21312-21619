@@ -5,6 +5,7 @@ import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.feed_screen.*
 import org.json.JSONObject
@@ -17,12 +18,17 @@ class Feed : AppCompatActivity() {
     val API: String = "44b71d1183d492c052c10a6f7ebf27dd"
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.feed_screen)
 
         WeatherTask().execute()
         verifyUserIsLoggedIn()
 
+        button_findBikeNearYou.setOnClickListener {
+            val intentMaps = Intent(this, MapsForBike::class.java)
+            startActivity(intentMaps)
+        }
 
         imageButton_logOff.setOnClickListener {
             userSignOut()

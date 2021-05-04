@@ -3,6 +3,7 @@ package com.example.weather_application
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.WindowManager
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -13,6 +14,7 @@ class Profile : AppCompatActivity() {
     private lateinit var mDatabaseReference: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile_screen)
 
@@ -22,6 +24,10 @@ class Profile : AppCompatActivity() {
 
         profile_resetPassword.setOnClickListener {
             resetEmail()
+        }
+
+        profile_editSave.setOnClickListener {
+            saveInfo()
         }
 
         retrieveData()
@@ -67,6 +73,33 @@ class Profile : AppCompatActivity() {
                 .addOnFailureListener {
                     Log.d("Reset", "Failed to reset Password: ${it.message}")
                     Toast.makeText(this, "Failed to reset password: ${it.message}", Toast.LENGTH_SHORT).show()
+                }
+    }
+
+    private fun saveInfo() {
+        val uid = FirebaseAuth.getInstance().uid ?: ""
+        val fname = editText_FirstNameEdit.text.toString()
+        val sname = editText_SecondNameEdit.text.toString()
+
+        if (fname.isEmpty() || sname.isEmpty()) {
+            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        mDatabaseReference = FirebaseDatabase.getInstance().reference
+        mDatabaseReference.child("users").child(uid).child("firstName").setValue(fname)
+        mDatabaseReference.child("users").child(uid).child("secondName").setValue(sname)
+                .addOnCompleteListener {
+                    if (!it.isSuccessful) return@addOnCompleteListener
+
+                    // else if successful
+                    Log.d("Update", "Information Updated!")
+                    finish()
+                    Toast.makeText(this,"Information Updated!", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener {
+                    Log.d("Update", "Information Update Error!")
+                    Toast.makeText(this, "Error while updating information", Toast.LENGTH_SHORT).show()
                 }
     }
 

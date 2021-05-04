@@ -22,7 +22,7 @@
     <string name="register_rgbutton">Register</string>
 
     <!-- Feed Screen Strings -->
-    <string name="feed_logoff">Log Off Button</string>
+    <string name="feed_logoff">Log Off</string>
     <string name="feed_editprofile">Profile</string>
     <string name="feed_biking">Man on Bike</string>
     <string name="feed_findbike_bt">Find a Bike Near You</string>
@@ -36,12 +36,14 @@
     <string name="feed_imageDescription">maxminTemp</string>
     <string name="feed_dublin">Dublin, IE</string>
     <string name="feed_paris">Paris, FR</string>
+    <string name="feed_profile">Profile</string>
 
     <!-- Profile Screen Strings -->
     <string name="profile_edit">Save Profile</string>
     <string name="profile_reset_password">Reset Password</string>
     <string name="profile_firstName">First Name</string>
     <string name="profile_secondName">Second Name</string>
+    <string name="title_activity_maps_for_bike">Map</string>
 
 
 </resources>

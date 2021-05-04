@@ -13,9 +13,6 @@ import kotlinx.android.synthetic.main.login_screen.*
 class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        //Hiding Status Bar
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_screen)
 
