@@ -5,9 +5,7 @@ import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.WindowManager
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.feed_screen.*
 import kotlinx.android.synthetic.main.feed_screen.imageButton_logOff
 import kotlinx.android.synthetic.main.feed_screen.imageView_weatherIcon
 import kotlinx.android.synthetic.main.feed_screen.mainContainerFeed
@@ -26,6 +24,7 @@ import java.net.URL
 
 class FeedParis : AppCompatActivity() {
 
+    // Desired city to get weather information from and API Key for permission
     val CITY: String = "paris,fr"
     val API: String = "8ad632697414be0ea06cd0357fb775ba"
 
@@ -34,23 +33,28 @@ class FeedParis : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.feed_screen_paris)
 
+        // Fill in weather information
         WeatherTask().execute()
 
+        // Initialize find a bike MAPS intent
         button_findBikeNearYou2.setOnClickListener {
             val intentMaps = Intent(this, MapsForBike::class.java)
             startActivity(intentMaps)
         }
 
+        // Sign off and load splash page
         imageButton_logOff.setOnClickListener {
             userSignOut()
         }
 
+        // Change to dublin weather information
         button_toDublin.setOnClickListener {
             finish()
             val intentDublin = Intent(this, Feed::class.java)
             startActivity(intentDublin)
         }
 
+        // Open Profile Edit Page
         buttonEditProfile.setOnClickListener {
             val intentProfile = Intent(this, Profile::class.java)
             intentProfile.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
@@ -58,6 +62,7 @@ class FeedParis : AppCompatActivity() {
         }
     }
 
+    // Sign out of current user session and return to splash page
     private fun userSignOut() {
         FirebaseAuth.getInstance().signOut()
         val intentSplash = Intent(this, Splash::class.java)
@@ -65,14 +70,17 @@ class FeedParis : AppCompatActivity() {
         startActivity(intentSplash)
     }
 
+    // Weather data retrieval class
     inner class WeatherTask() : AsyncTask<String, Void, String>() {
 
+        // Only set XML visibility bar while tasks are executing in the background
         override fun onPreExecute() {
             progressBar_feed.visibility = View.VISIBLE
             mainContainerFeed.visibility = View.GONE
             textView_errorText.visibility = View.GONE
         }
 
+        // Retrieving API data and formatting
         override fun doInBackground(vararg params: String?): String? {
             var response:String?
             try{
@@ -85,9 +93,11 @@ class FeedParis : AppCompatActivity() {
             return response
         }
 
+        // After retrieving the data access the JSON Object elements
         override fun onPostExecute(result: String?) {
             super.onPostExecute(result)
             try {
+                // Accessing single elements and arrays inside JSON with given string names
                 val jsonObj = JSONObject(result)
                 val main = jsonObj.getJSONObject("main")
                 val sys = jsonObj.getJSONObject("sys")
@@ -99,12 +109,14 @@ class FeedParis : AppCompatActivity() {
                 val tempMin = "Min Temp: "+main.getString("temp_min")+"°C"
                 val tempMax = "Max Temp: "+main.getString("temp_max")+"°C"
 
+                // Setting textViews with retrieved information
                 textView_address.text = address
                 textView_temperature.text = "$temp°C"
                 textView_description.text = weatherDescription.capitalize()
                 textView_minTemperature.text = tempMin
                 textView_maxTemperature.text = tempMax
 
+                // Change weather icon base on returned weatherDescription on the API JSON
                 if (weatherDescription == "clear sky") {
                     imageView_weatherIcon.setImageResource(R.drawable.sunny)
                 }

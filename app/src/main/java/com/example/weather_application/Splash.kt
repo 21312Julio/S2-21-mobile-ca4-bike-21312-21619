@@ -18,11 +18,13 @@ class Splash : AppCompatActivity() {
         val splashLoginButton = findViewById<Button>(R.id.splash_loginbt)
         val splashRegisterButton = findViewById<Button>(R.id.splash_registerbt)
 
+        // Initialize login page when button is clicked
         splashLoginButton.setOnClickListener {
             val loginIntent = Intent(this, Login::class.java)
             startActivity(loginIntent)
         }
 
+        // Initialize register page when button is clicked
         splashRegisterButton.setOnClickListener {
             val registerIntent = Intent(this, Register::class.java)
             startActivity(registerIntent)

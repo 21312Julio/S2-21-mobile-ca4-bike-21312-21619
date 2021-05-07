@@ -2,15 +2,16 @@ package com.example.weather_application
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
+import android.util.Log
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import java.util.concurrent.ArrayBlockingQueue
 
-class MapsForBike : AppCompatActivity(), OnMapReadyCallback {
+class MapsForBike() : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var map: GoogleMap
 
@@ -37,7 +38,21 @@ class MapsForBike : AppCompatActivity(), OnMapReadyCallback {
 
         // Add a marker in Dublin and move the camera
         val dublin = LatLng(53.3497645, -6.2602732)
-        map.addMarker(MarkerOptions().position(dublin).title("Marker in Dublin"))
-        map.moveCamera(CameraUpdateFactory.newLatLng(dublin))
+        val zoomLevel = 15f
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(dublin, zoomLevel))
+
+        // Trying to add Marker onto the map by using a forEach loop in my requestHandler list response
+        // NOT WORKING *******************
+        val stations = fetchJson {
+            it.forEach {
+                val latitude = it.position.lat
+                val longitude = it.position.lng
+                val latLng = LatLng(latitude, longitude)
+                map.addMarker(MarkerOptions().position(latLng))
+            }
+        }
+
     }
+
+
 }

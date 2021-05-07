@@ -8,6 +8,8 @@
     android:background="@drawable/app_background"
     tools:context=".Feed">
 
+    <!-- Paris Weather Screen -->
+    <!-- Biking PNG Bottom -->
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="135dp"
@@ -24,6 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/bikingvectorfeed" />
 
+    <!-- Favourites Button -->
     <Button
         android:id="@+id/button_favorites"
         style="@style/Widget.MaterialComponents.Button.TextButton"
@@ -45,6 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Find Bikes Button -->
     <Button
         android:id="@+id/button_findBikeNearYou2"
         android:layout_width="337dp"
@@ -61,10 +65,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Current Temperature -->
     <TextView
         android:id="@+id/textView_temperature"
         android:layout_width="0dp"
-        android:layout_height="88dp"
+        android:layout_height="110dp"
         android:layout_marginTop="232dp"
         android:fontFamily="@font/titillium_web_light"
         android:gravity="center_horizontal"
@@ -77,6 +82,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Loading Progress -->
     <ProgressBar
         android:id="@+id/progressBar_feed"
         style="?android:attr/progressBarStyle"
@@ -89,6 +95,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Error returning weather conditions text WARNING -->
     <TextView
         android:id="@+id/textView_errorText"
         android:layout_width="wrap_content"
@@ -105,6 +112,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Current Location -->
     <TextView
         android:id="@+id/textView_address"
         android:layout_width="wrap_content"
@@ -119,6 +127,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Weather Description -->
     <TextView
         android:id="@+id/textView_description"
         android:layout_width="0dp"
@@ -134,6 +143,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_temperature" />
 
+    <!-- Minimum Temperature -->
     <TextView
         android:id="@+id/textView_minTemperature"
         android:layout_width="wrap_content"
@@ -149,6 +159,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_description" />
 
+    <!-- Maximum Temperature -->
     <TextView
         android:id="@+id/textView_maxTemperature"
         android:layout_width="wrap_content"
@@ -164,6 +175,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/textView_description" />
 
+    <!-- Line between MIN and MAX TEMPERATURE -->
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
@@ -175,6 +187,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_description"
         app:srcCompat="@drawable/separator" />
 
+    <!-- Current Weather Image -->
     <ImageView
         android:id="@+id/imageView_weatherIcon"
         android:layout_width="146dp"
@@ -187,6 +200,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/scatteredclouds" />
 
+    <!-- Change location button -->
     <Button
         android:id="@+id/button_toDublin"
         android:layout_width="111dp"
@@ -202,6 +216,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_address" />
 
+    <!-- Edit Profile Button -->
     <ImageView
         android:id="@+id/buttonEditProfile"
         android:layout_width="46dp"
@@ -214,6 +229,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/profileicon" />
 
+    <!-- LogOff Button -->
     <Button
         android:id="@+id/imageButton_logOff"
         android:layout_width="wrap_content"
@@ -228,6 +244,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Edit Profile Text under Image Button -->
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"

@@ -8,6 +8,7 @@
     android:background="@drawable/bg_splash"
     >
 
+    <!-- App Icon PNG -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="75dp"
@@ -19,6 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logo" />
 
+    <!-- Slogan Message TextField -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -33,6 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+    <!-- App Description TextField -->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -46,6 +49,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <!-- App Description TextField -->
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -59,6 +63,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
+    <!-- Login Page Button -->
     <Button
         android:id="@+id/splash_loginbt"
         android:layout_width="316dp"
@@ -75,6 +80,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
+    <!-- Register Page Button -->
     <Button
         android:id="@+id/splash_registerbt"
         android:layout_width="189dp"

@@ -18,21 +18,25 @@ class Profile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile_screen)
 
+        // Go back to feed by finishing current intent
         bt_back3.setOnClickListener {
             finish()
         }
 
+        // Send email to reset password when button is clicked
         profile_resetPassword.setOnClickListener {
             resetEmail()
         }
 
+        // Update data in database when button is clicked
         profile_editSave.setOnClickListener {
             saveInfo()
         }
 
+        // Database snapshot of current user object
         retrieveData()
 
-
+        // Get current user email
         FirebaseAuth.getInstance().currentUser.email
     }
 
@@ -41,9 +45,11 @@ class Profile : AppCompatActivity() {
         var getData = object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (uid != null) {
+                    // Snapshot of database data of user using UID as guide
                     var firstName = snapshot.child("users").child(uid).child("firstName").value
                     var secondName = snapshot.child("users").child(uid).child("secondName").value
                     val users = User(uid, firstName as String, secondName as String)
+                    // Setting values to fields in screen
                     editText_FirstNameEdit.setText(users.firstName)
                     editText_SecondNameEdit.setText(users.secondName)
                 }
@@ -62,6 +68,7 @@ class Profile : AppCompatActivity() {
 
     private fun resetEmail() {
         val email = FirebaseAuth.getInstance().currentUser.email
+        // Send a reset password to email of current logged in user
         FirebaseAuth.getInstance().sendPasswordResetEmail(email)
                 .addOnCompleteListener {
                     if (!it.isSuccessful) return@addOnCompleteListener
@@ -78,6 +85,7 @@ class Profile : AppCompatActivity() {
 
     private fun saveInfo() {
         val uid = FirebaseAuth.getInstance().uid ?: ""
+        // Returning current user ID, setting variables values that will be edited and checking if fields are empty
         val fname = editText_FirstNameEdit.text.toString()
         val sname = editText_SecondNameEdit.text.toString()
 
@@ -86,6 +94,7 @@ class Profile : AppCompatActivity() {
             return
         }
 
+        // Referencing current database and accessing path where data is stored, then changing the value
         mDatabaseReference = FirebaseDatabase.getInstance().reference
         mDatabaseReference.child("users").child(uid).child("firstName").setValue(fname)
         mDatabaseReference.child("users").child(uid).child("secondName").setValue(sname)

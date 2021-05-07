@@ -45,5 +45,8 @@
     <string name="profile_secondName">Second Name</string>
     <string name="title_activity_maps_for_bike">Map</string>
 
+    <!-- App Name -->
+    <string name="appname">Wheelio</string>
+
 
 </resources>

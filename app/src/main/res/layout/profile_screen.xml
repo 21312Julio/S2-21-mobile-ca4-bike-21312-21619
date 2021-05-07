@@ -7,6 +7,7 @@
     tools:context=".Profile"
     android:background="@drawable/app_background">
 
+    <!-- Save Profile Button -->
     <Button
         android:id="@+id/profile_editSave"
         android:layout_width="320dp"
@@ -24,6 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_SecondNameEdit" />
 
+    <!-- Send Reset Password Email -->
     <Button
         android:id="@+id/profile_resetPassword"
         android:layout_width="320dp"
@@ -41,6 +43,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_editSave" />
 
+    <!-- Edit Second Name -->
     <EditText
         android:id="@+id/editText_SecondNameEdit"
         android:layout_width="319dp"
@@ -63,6 +66,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_FirstNameEdit" />
 
+    <!-- Edit First Name -->
     <EditText
         android:id="@+id/editText_FirstNameEdit"
         android:layout_width="322dp"
@@ -84,6 +88,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/icon3" />
 
+    <!-- Bike PNG -->
     <ImageView
         android:id="@+id/icon3"
         android:layout_width="152dp"
@@ -95,6 +100,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bike" />
 
+    <!-- Back to Feed Button -->
     <Button
         android:id="@+id/bt_back3"
         android:layout_width="wrap_content"
@@ -110,6 +116,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Edit Text Label First Name -->
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -124,6 +131,7 @@
         app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Edit Text Label Second Name -->
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"

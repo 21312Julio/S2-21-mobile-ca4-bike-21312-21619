@@ -16,10 +16,12 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_screen)
 
+        // Login with email and password
         login_loginbt.setOnClickListener {
             performLogin()
         }
 
+        // Go back to splash page by finishing current intent
         bt_back.setOnClickListener {
             finish()
         }
@@ -39,6 +41,7 @@ class Login : AppCompatActivity() {
 
         Log.d("Main", "Attempt login with email/password: $email/***")
 
+        // Verify is email and password are registered in FIREBASE authentication system
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener {
                     if (!it.isSuccessful) return@addOnCompleteListener

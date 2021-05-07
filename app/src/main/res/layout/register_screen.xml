@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/app_background">
 
+    <!-- Register Profile Button -->
     <Button
         android:id="@+id/register_registerbt"
         android:layout_width="320dp"
@@ -24,6 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_PasswordRegister" />
 
+    <!-- First Name Input -->
     <EditText
         android:id="@+id/editText_FirstNameRegister"
         android:layout_width="319dp"
@@ -45,6 +47,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/icon2" />
 
+    <!-- Second Name Input -->
     <EditText
         android:id="@+id/editText_SecondNameRegister"
         android:layout_width="319dp"
@@ -66,6 +69,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_FirstNameRegister" />
 
+    <!-- Email Register Input -->
     <EditText
         android:id="@+id/editText_EmailRegister"
         android:layout_width="319dp"
@@ -87,6 +91,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_SecondNameRegister" />
 
+    <!-- Password Register Input -->
     <EditText
         android:id="@+id/editText_PasswordRegister"
         android:layout_width="319dp"
@@ -108,6 +113,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_EmailRegister" />
 
+    <!-- Back to Splash Button -->
     <Button
         android:id="@+id/bt_back2"
         android:layout_width="wrap_content"
@@ -123,6 +129,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- App icon PNG -->
     <ImageView
         android:id="@+id/icon2"
         android:layout_width="121dp"
