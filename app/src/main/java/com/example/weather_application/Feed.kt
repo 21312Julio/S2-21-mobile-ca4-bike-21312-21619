@@ -52,6 +52,11 @@ class Feed : AppCompatActivity() {
             intentParis.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intentParis)
         }
+
+        button_favorites.setOnClickListener {
+            val intentFavorites = Intent(this, Favorites::class.java)
+            startActivity(intentFavorites)
+        }
     }
 
     // Verify is someone is current logged in on the phone being used

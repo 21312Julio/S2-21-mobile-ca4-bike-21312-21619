@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.feed_screen.*
 import kotlinx.android.synthetic.main.feed_screen.imageButton_logOff
 import kotlinx.android.synthetic.main.feed_screen.imageView_weatherIcon
 import kotlinx.android.synthetic.main.feed_screen.mainContainerFeed
@@ -18,6 +19,7 @@ import kotlinx.android.synthetic.main.feed_screen.textView_minTemperature
 import kotlinx.android.synthetic.main.feed_screen.textView_temperature
 import kotlinx.android.synthetic.main.feed_screen_paris.*
 import kotlinx.android.synthetic.main.feed_screen_paris.buttonEditProfile
+import kotlinx.android.synthetic.main.feed_screen_paris.button_favorites
 import org.json.JSONObject
 import java.lang.Exception
 import java.net.URL
@@ -59,6 +61,11 @@ class FeedParis : AppCompatActivity() {
             val intentProfile = Intent(this, Profile::class.java)
             intentProfile.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intentProfile)
+        }
+
+        button_favorites.setOnClickListener {
+            val intentFavorites = Intent(this, FavoritesLyon::class.java)
+            startActivity(intentFavorites)
         }
     }
 

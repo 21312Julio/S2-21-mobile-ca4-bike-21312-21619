@@ -74,7 +74,7 @@
         android:textColor="#000000"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:backgroundTint="#FFFFFF"
+        app:backgroundTint="#E68621"
         app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

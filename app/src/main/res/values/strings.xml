@@ -26,7 +26,7 @@
     <string name="feed_editprofile">Profile</string>
     <string name="feed_biking">Man on Bike</string>
     <string name="feed_findbike_bt">Find a Bike Near You</string>
-    <string name="feed_favorites_bt">Favorites</string>
+    <string name="feed_favorites_bt">Stations</string>
     <string name="feed_temperaturevalue">12°C</string>
     <string name="feed_address">Brazil, SP</string>
     <string name="feed_error">Something went wrong. Try again</string>
@@ -49,5 +49,8 @@
     <string name="appname">Wheelio</string>
     <string name="title_activity_maps_for_bike_paris">Map</string>
 
+    <!-- Favorites -->
+    <string name="fav_favorites">Favorites</string>
+    <string name="fav_description">Details</string>
 
 </resources>
