@@ -24,7 +24,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.IOException
 
-class MapsForBike() : AppCompatActivity(), OnMapReadyCallback {
+class MapsForBikeParis : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var map: GoogleMap
     private val TAG = MapsForBike::class.java.simpleName
@@ -32,7 +32,7 @@ class MapsForBike() : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.maps_screen)
+        setContentView(R.layout.maps_screen_paris)
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
                 .findFragmentById(R.id.map) as SupportMapFragment
@@ -113,25 +113,23 @@ class MapsForBike() : AppCompatActivity(), OnMapReadyCallback {
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
-
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
 
         setMapStyle(map)
 
-        // Add a marker in Dublin and move the camera
-        val dublin = LatLng(53.3497645, -6.2602732)
+        // Add a marker in Lyon,France and move the camera
+        val lyon = LatLng(45.75, 4.85)
         val zoomLevel = 15f
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(dublin, zoomLevel))
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(lyon, zoomLevel))
 
         enableMyLocation()
     }
 
-
     inner class backgroundTask(): AsyncTask<Void, Void, List<Stations>>() {
 
         val apiKey = "e7a1f66f33e297827e7ec779b6cee6dd00ae76fb"
-        val city = "dublin"
+        val city = "lyon"
         val baseUrl = "https://api.jcdecaux.com/vls/v1/stations?contract=${city}&apiKey=${apiKey}"
         val client = OkHttpClient()
 
@@ -166,8 +164,7 @@ class MapsForBike() : AppCompatActivity(), OnMapReadyCallback {
                 val latLng = LatLng(latitude, longitude)
                 val title = "${name}: ${status}"
                 val snippet = "Available Stands: ${available} | " +
-                              "Available Bikes: ${availableBikes}"
-
+                        "Available Bikes: ${availableBikes}"
                 map.addMarker(MarkerOptions().position(latLng).title(title).snippet(snippet)).setIcon(
                         bitmapDescriptorFromVector(applicationContext, R.drawable.ic_baseline_directions_bike_24)
                 )
@@ -175,6 +172,5 @@ class MapsForBike() : AppCompatActivity(), OnMapReadyCallback {
         }
 
     }
-
 }
 

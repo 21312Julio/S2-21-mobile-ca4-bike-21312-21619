@@ -25,7 +25,7 @@ import java.net.URL
 class FeedParis : AppCompatActivity() {
 
     // Desired city to get weather information from and API Key for permission
-    val CITY: String = "paris,fr"
+    val CITY: String = "lyon,fr"
     val API: String = "8ad632697414be0ea06cd0357fb775ba"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +38,7 @@ class FeedParis : AppCompatActivity() {
 
         // Initialize find a bike MAPS intent
         button_findBikeNearYou2.setOnClickListener {
-            val intentMaps = Intent(this, MapsForBike::class.java)
+            val intentMaps = Intent(this, MapsForBikeParis::class.java)
             startActivity(intentMaps)
         }
 

@@ -10,8 +10,9 @@ import kotlinx.android.synthetic.main.feed_screen.*
 import org.json.JSONObject
 import java.lang.Exception
 import java.net.URL
+import kotlin.coroutines.CoroutineContext
 
-class   Feed : AppCompatActivity() {
+class Feed : AppCompatActivity() {
 
     // Desired city to get weather information from and API Key for permission
     val CITY: String = "dublin,ie"

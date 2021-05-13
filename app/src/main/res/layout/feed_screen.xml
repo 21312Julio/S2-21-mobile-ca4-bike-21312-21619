@@ -37,6 +37,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Biking PNG Bottom -->
+
+    <!-- Favourites Button -->
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="135dp"
@@ -45,15 +47,13 @@
         android:layout_marginLeft="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/feed_biking"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/bikingvectorfeed" />
 
-    <!-- Favourites Button -->
     <Button
         android:id="@+id/button_favorites"
         style="@style/Widget.MaterialComponents.Button.TextButton"
@@ -159,7 +159,6 @@
         android:id="@+id/textView_description"
         android:layout_width="0dp"
         android:layout_height="28dp"
-        android:layout_marginTop="16dp"
         android:fontFamily="@font/titillium_web_light"
         android:gravity="center_horizontal"
         android:text="@string/feed_weatherDescription"

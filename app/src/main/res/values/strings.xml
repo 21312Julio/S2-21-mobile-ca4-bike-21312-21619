@@ -35,7 +35,7 @@
     <string name="feed_maxTemp">Max Temp: 80°C</string>
     <string name="feed_imageDescription">maxminTemp</string>
     <string name="feed_dublin">Dublin, IE</string>
-    <string name="feed_paris">Paris, FR</string>
+    <string name="feed_paris">Lyon, FR</string>
     <string name="feed_profile">Profile</string>
 
     <!-- Profile Screen Strings -->
@@ -47,6 +47,7 @@
 
     <!-- App Name -->
     <string name="appname">Wheelio</string>
+    <string name="title_activity_maps_for_bike_paris">Map</string>
 
 
 </resources>
