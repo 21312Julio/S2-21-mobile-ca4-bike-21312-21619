@@ -1,5 +1,6 @@
 package com.example.weather_application
 
+import android.content.Intent
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,6 +22,11 @@ class RecyclerStationsDublin : AppCompatActivity() {
 
         bt_back4.setOnClickListener {
             finish()
+        }
+
+        button_toFavoritesList.setOnClickListener {
+            val intent = Intent(this, Favorites::class.java)
+            startActivity(intent)
         }
     }
 
@@ -59,7 +65,7 @@ class RecyclerStationsDublin : AppCompatActivity() {
                 }
             }
 
-            recyclerView_favorites.adapter = adapter
+            recyclerView_stations.adapter = adapter
         }
 
     }

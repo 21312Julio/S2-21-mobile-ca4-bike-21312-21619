@@ -1,7 +1,10 @@
 package com.example.weather_application
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.xwray.groupie.GroupAdapter
+import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.stationdetails_screen.*
 
 class StationDetailsPage : AppCompatActivity(){
@@ -12,6 +15,15 @@ class StationDetailsPage : AppCompatActivity(){
 
         bt_back5.setOnClickListener {
             finish()
+        }
+
+        button3_addToFav.setOnClickListener {
+            val intent = Intent(this, Favorites::class.java)
+            intent.putExtra("name", textView_stationName.text)
+            intent.putExtra("status", textView_stationsStatus.text)
+            intent.putExtra("available", textView_bikeStands.text)
+            intent.putExtra("availableBikes", textView_bikes.text)
+            startActivity(intent)
         }
 
         textView_stationName.text = intent.getStringExtra("name")
