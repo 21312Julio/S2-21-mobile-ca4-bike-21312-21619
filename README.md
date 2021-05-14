@@ -1,6 +1,6 @@
 # Biking | Weather Application - Mobile Development Class CA
 
-Created by Julio Costa Beyeler 21312 | Lucas Costa 21619
+Created by Julio Costa Beyeler 21312
 
 ## Figma Navigation Flow | Design
 
