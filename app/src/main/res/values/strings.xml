@@ -49,8 +49,18 @@
     <string name="appname">Wheelio</string>
     <string name="title_activity_maps_for_bike_paris">Map</string>
 
-    <!-- Favorites -->
+    <!-- RecyclerStationsDublin -->
     <string name="fav_favorites">Favorites</string>
     <string name="fav_description">Details</string>
+
+    <!-- Station Details Screen -->
+    <string name="details_name">Name</string>
+    <string name="details_status">Status</string>
+    <string name="details_bikestands">Available Bike Stands</string>
+    <string name="details_bikes">Available Bikes</string>
+    <string name="details_latitude">Latitude</string>
+    <string name="details_longitude">Longitude</string>
+    <string name="title_activity_stations_detail">Map</string>
+    <string name="details_add">Add To Favorites</string>
 
 </resources>

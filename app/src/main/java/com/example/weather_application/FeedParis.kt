@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.feed_screen.*
 import kotlinx.android.synthetic.main.feed_screen.imageButton_logOff
 import kotlinx.android.synthetic.main.feed_screen.imageView_weatherIcon
 import kotlinx.android.synthetic.main.feed_screen.mainContainerFeed
@@ -64,7 +63,7 @@ class FeedParis : AppCompatActivity() {
         }
 
         button_favorites.setOnClickListener {
-            val intentFavorites = Intent(this, FavoritesLyon::class.java)
+            val intentFavorites = Intent(this, RecyclerStationsLyon::class.java)
             startActivity(intentFavorites)
         }
     }

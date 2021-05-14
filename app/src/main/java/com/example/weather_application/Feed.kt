@@ -10,7 +10,6 @@ import kotlinx.android.synthetic.main.feed_screen.*
 import org.json.JSONObject
 import java.lang.Exception
 import java.net.URL
-import kotlin.coroutines.CoroutineContext
 
 class Feed : AppCompatActivity() {
 
@@ -54,7 +53,7 @@ class Feed : AppCompatActivity() {
         }
 
         button_favorites.setOnClickListener {
-            val intentFavorites = Intent(this, Favorites::class.java)
+            val intentFavorites = Intent(this, RecyclerStationsDublin::class.java)
             startActivity(intentFavorites)
         }
     }

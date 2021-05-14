@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Favorites"
+    tools:context=".RecyclerStationsDublin"
     android:background="@drawable/app_background">
 
     <Button
@@ -53,7 +53,7 @@
         android:fontFamily="@font/titillium_web_bold"
         android:text="@string/fav_favorites"
         android:textColor="#000000"
-        app:backgroundTint="#E68621"
+        app:backgroundTint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />

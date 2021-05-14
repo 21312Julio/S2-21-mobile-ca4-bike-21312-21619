@@ -12,7 +12,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.IOException
 
-class FavoritesLyon : AppCompatActivity() {
+class RecyclerStationsLyon : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.favorites_screen)
