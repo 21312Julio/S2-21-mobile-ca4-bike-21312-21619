@@ -6,6 +6,8 @@ import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.station_newrow.view.*
 
+// Recycler View Station Items
+// Receives a station item as parameter. Is called inside API call on Background
 class StationItem(val station: Stations): Item<ViewHolder>() {
     override fun bind(viewHolder: ViewHolder, position: Int) {
         val name = station.name
@@ -17,8 +19,10 @@ class StationItem(val station: Stations): Item<ViewHolder>() {
         val title = "${name}: ${status}"
         val snippet = "Stands: ${available} | " +
                 "Bikes: ${availableBikes}"
+        // Assigning values to layout file
         viewHolder.itemView.textViewNameStation.text = title
         viewHolder.itemView.textViewAvailable.text = snippet
+        // Assigning parameters to details page intent
         viewHolder.itemView.button2.setOnClickListener {
             val intent = Intent(viewHolder.itemView.context, StationDetailsPage::class.java)
                 intent.putExtra("name", name)

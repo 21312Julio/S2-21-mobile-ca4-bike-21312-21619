@@ -7,6 +7,7 @@
     tools:context=".RecyclerStationsDublin"
     android:background="@drawable/app_background">
 
+    <!-- Back to Feed Button -->
     <Button
         android:id="@+id/bt_back4"
         android:layout_width="wrap_content"
@@ -22,6 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Station List Recycler View -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_stations"
         android:layout_width="0dp"
@@ -33,6 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
+    <!-- Google Maps Image -->
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="216dp"
@@ -45,6 +48,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/mapsforlist" />
 
+    <!-- Go to Favorites Button -->
     <Button
         android:id="@+id/button_toFavoritesList"
         android:layout_width="wrap_content"
@@ -58,6 +62,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
+    <!-- Line Separator Text View -->
     <TextView
         android:id="@+id/textView8"
         android:layout_width="0dp"

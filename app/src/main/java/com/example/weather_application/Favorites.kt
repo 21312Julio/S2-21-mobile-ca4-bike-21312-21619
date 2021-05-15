@@ -11,12 +11,15 @@ class Favorites : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.screen_favorites)
 
+        // Back to Recycler View List
         bt_back6.setOnClickListener {
             finish()
         }
 
+        // Initialize adapter
         val adapter = GroupAdapter<ViewHolder>()
 
+        // Creating station element with intent parameters on startActivity
         val name = intent.getStringExtra("name")
         val address = intent.getStringExtra("name")
         val status = intent.getStringExtra("status")
@@ -27,6 +30,8 @@ class Favorites : AppCompatActivity() {
 
         val station = Stations(name.toString(), address.toString(), position, 0, bikeStands, bikes, status.toString())
 
+        // Adding item to adapter and setting
+        // NOT WORKING
         adapter.add(StationItem(station))
         recyclerView_favorites.adapter = adapter
 

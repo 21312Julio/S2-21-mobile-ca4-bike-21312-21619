@@ -13,10 +13,13 @@ class StationDetailsPage : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.stationdetails_screen)
 
+        // Back to Station List
         bt_back5.setOnClickListener {
             finish()
         }
 
+        // Add station to favorites Recycler View
+        // NOT WORKING
         button3_addToFav.setOnClickListener {
             val intent = Intent(this, Favorites::class.java)
             intent.putExtra("name", textView_stationName.text)
@@ -26,6 +29,7 @@ class StationDetailsPage : AppCompatActivity(){
             startActivity(intent)
         }
 
+        // Assigning parameters from StationItem to textViews
         textView_stationName.text = intent.getStringExtra("name")
         textView_stationsStatus.text = intent.getStringExtra("status")
         textView_bikeStands.text = "AVAILABLE BIKE STANDS: " + intent.getIntExtra("available",0)

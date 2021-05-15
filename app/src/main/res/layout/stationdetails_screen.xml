@@ -8,6 +8,7 @@
     android:background="@drawable/app_background"
     tools:context=".StationDetailsPage">
 
+    <!-- Back to Recycler View -->
     <Button
         android:id="@+id/bt_back5"
         android:layout_width="wrap_content"
@@ -23,6 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Station Name Text View -->
     <TextView
         android:id="@+id/textView_stationName"
         android:layout_width="0dp"
@@ -46,6 +48,7 @@
         app:drawableLeftCompat="@drawable/fn"
         app:drawableStartCompat="@drawable/fn" />
 
+    <!-- Station Status Text View -->
     <TextView
         android:id="@+id/textView_stationsStatus"
         android:layout_width="0dp"
@@ -69,6 +72,7 @@
         app:drawableLeftCompat="@drawable/fn"
         app:drawableStartCompat="@drawable/statusicon" />
 
+    <!-- Station Available Bike Stands Text View -->
     <TextView
         android:id="@+id/textView_bikeStands"
         android:layout_width="0dp"
@@ -92,6 +96,7 @@
         app:drawableLeftCompat="@drawable/statusicon"
         app:drawableStartCompat="@drawable/standsicon" />
 
+    <!-- Station Available Bikes Text View -->
     <TextView
         android:id="@+id/textView_bikes"
         android:layout_width="0dp"
@@ -115,6 +120,7 @@
         app:drawableLeftCompat="@drawable/statusicon"
         app:drawableStartCompat="@drawable/freebikesicon" />
 
+    <!-- Station Latitude Text View -->
     <TextView
         android:id="@+id/textView_latitude"
         android:layout_width="0dp"
@@ -138,6 +144,7 @@
         app:drawableLeftCompat="@drawable/statusicon"
         app:drawableStartCompat="@drawable/coordinatesicon" />
 
+    <!-- Station Longitude Text View -->
     <TextView
         android:id="@+id/textView_longitude"
         android:layout_width="0dp"
@@ -161,6 +168,7 @@
         app:drawableLeftCompat="@drawable/coordinatesicon"
         app:drawableStartCompat="@drawable/coordinatesicon" />
 
+    <!-- Add to Favorites Button / NOT WORKING -->
     <Button
         android:id="@+id/button3_addToFav"
         android:layout_width="wrap_content"

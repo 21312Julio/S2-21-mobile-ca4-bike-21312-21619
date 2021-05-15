@@ -20,16 +20,19 @@ class RecyclerStationsDublin : AppCompatActivity() {
 
         backgroundTask().execute()
 
+        // Back to Feed Button
         bt_back4.setOnClickListener {
             finish()
         }
 
+        // Go to Favorites List Button
         button_toFavoritesList.setOnClickListener {
             val intent = Intent(this, Favorites::class.java)
             startActivity(intent)
         }
     }
 
+    // Retrieve API data and add StationItem objects to Recycler View
     inner class backgroundTask(): AsyncTask<Void, Void, List<Stations>>() {
 
         val apiKey = "e7a1f66f33e297827e7ec779b6cee6dd00ae76fb"
@@ -41,6 +44,7 @@ class RecyclerStationsDublin : AppCompatActivity() {
             super.onPreExecute()
         }
 
+        // Retrieve data and parse into station class
         override fun doInBackground(vararg params: Void?): List<Stations> {
             val request = Request.Builder().url(baseUrl).build()
 
@@ -56,6 +60,7 @@ class RecyclerStationsDublin : AppCompatActivity() {
             }
         }
 
+        // Adding items to adapter and setting
         override fun onPostExecute(result: List<Stations>?) {
             super.onPostExecute(result)
             val adapter = GroupAdapter<ViewHolder>()

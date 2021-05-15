@@ -62,6 +62,7 @@ class FeedParis : AppCompatActivity() {
             startActivity(intentProfile)
         }
 
+        // Open List of Stations Page
         button_favorites.setOnClickListener {
             val intentFavorites = Intent(this, RecyclerStationsLyon::class.java)
             startActivity(intentFavorites)

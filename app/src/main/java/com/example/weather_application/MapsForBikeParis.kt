@@ -40,6 +40,7 @@ class MapsForBikeParis : AppCompatActivity(), OnMapReadyCallback {
         backgroundTask().execute()
     }
 
+    // Changing the style and color of the map
     private fun setMapStyle(googleMap: GoogleMap) {
         map = googleMap
 
@@ -58,6 +59,7 @@ class MapsForBikeParis : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
+    // Convert vector image from drawable into bitmap so I can use as a marker icon in google maps
     private fun bitmapDescriptorFromVector(context: Context, @DrawableRes vectorDrawableResourceId: Int): BitmapDescriptor? {
         val background = ContextCompat.getDrawable(context, R.drawable.ic_baseline_directions_bike_24)
         background!!.setBounds(0, 0, background.intrinsicWidth, background.intrinsicHeight)
@@ -70,12 +72,14 @@ class MapsForBikeParis : AppCompatActivity(), OnMapReadyCallback {
         return BitmapDescriptorFactory.fromBitmap(bitmap)
     }
 
+    // Access location permission
     private fun isPermissionGranted() : Boolean {
         return ContextCompat.checkSelfPermission(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
     }
 
+    // Enable location if permission is granted
     private fun enableMyLocation() {
         if (isPermissionGranted()) {
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -126,6 +130,7 @@ class MapsForBikeParis : AppCompatActivity(), OnMapReadyCallback {
         enableMyLocation()
     }
 
+    // Executing API task in background thread and returning API information
     inner class backgroundTask(): AsyncTask<Void, Void, List<Stations>>() {
 
         val apiKey = "e7a1f66f33e297827e7ec779b6cee6dd00ae76fb"
@@ -137,6 +142,7 @@ class MapsForBikeParis : AppCompatActivity(), OnMapReadyCallback {
             super.onPreExecute()
         }
 
+        // Return parsed JSON elements as station class
         override fun doInBackground(vararg params: Void?): List<Stations> {
             val request = Request.Builder().url(baseUrl).build()
 
@@ -152,6 +158,7 @@ class MapsForBikeParis : AppCompatActivity(), OnMapReadyCallback {
             }
         }
 
+        // Add markers in the map according the each station element positions and adding description box
         override fun onPostExecute(result: List<Stations>?) {
             super.onPostExecute(result)
             result?.forEach {
