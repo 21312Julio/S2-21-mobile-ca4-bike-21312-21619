@@ -2,9 +2,11 @@
 
 Created by Julio Costa Beyeler 21312
 
-## Figma Navigation Flow | Design
+## Resource Links 
 
-https://www.figma.com/file/liX3ldK2ejxGbYehAr3bjY/BikingAppCAMobile21312-21619?node-id=0%3A1
+* Figma Navigation UI | https://www.figma.com/file/liX3ldK2ejxGbYehAr3bjY/BikingAppCAMobile21312-21619?node-id=0%3A1
+* Report | https://drive.google.com/drive/folders/13jqOKWbz-WhBKoVrRHeUCf_f31kKKIvo?usp=sharing
+* Video Demonstration | https://youtu.be/OraoI8gaM9k
 
 ## Overview (Full Document Uploaded on Moodle)
 
